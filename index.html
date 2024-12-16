@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/tailwind.js"></script>
+    <script src="/tailwind.config.js"></script>
+    <script src="/components/popup.js"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <title>Shiksha</title>
+  </head>
+
+  <body class="font-outfit text-black">
+
+    <!-- Popup -->
+    <div class="px-4 w-full h-screen bg-black flex justify-center items-center bg-opacity-50 fixed top-0 left-0 z-[999] hidden opacity-0 transition-all duration-500"
+        id="modal-popup">
+        <div class="rounded-xl bg-white w-[90%] lg:w-1/3 h-[300px] relative transition-all duration-500 relative">
+            <!-- <img src="/public/modal2.png" alt="" class="absolute top-0 -left-3 w-1/5" />
+            <img src="/public/modal1.png" alt="" class="absolute bottom-0 -right-3 w-1/5" /> -->
+
+            <div class="absolute top-4 right-4">
+                <button class="cancel bg-blue-300 flex justify-center items-center p-1 rounded-full bg-opacity-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="h-full flex flex-col justify-center items-center">
+                <h3 class="text-2xl text-center mb-0">To know more</h3>
+                <h2 class="text-3xl font-bold text-center">Download Our Brochure</h2>
+                <a id="download"
+                    class="bg-btnAccent mt-3 px-8 py-2 text-white inline-block w-fit rounded-full flex items-center"
+                    href="/public/elance-shiksha-hub.pdf" target="_blank">Download
+                    Brochure <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="ml-3 feather feather-download">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-white">
+      <header>
+        <nav class="px-4 py-6 w-full z-50 bg-white">
+          <div
+            class="container mx-auto block md:flex justify-between items-center"
+          >
+            <div class="text-white text-2xl font-bold">
+              <img src="/public/shiksha-logo.png" alt="Shiksha" class="w-48" />
+            </div>
+
+            <div class="mt-4 lg:mt-0 block">
+              <a
+                href="#contact"
+                class="bg-secondaryBlue text-white p-4 rounded-xl hover:bg-secondaryBlueHover text-sm md:text-base"
+                >Start your journey today</a
+              >
+            </div>
+          </div>
+
+          <div
+            id="mobile-menu"
+            class="lg:hidden hidden flex flex-col space-y-4 mt-4"
+          >
+            <a
+              href="#contact"
+              class="bg-[#519FDE] text-white p-3 rounded-full hover:bg-blue-600 inline-block w-28"
+              onClick="toggleNavBar()"
+              >Start your journey today</a
+            >
+          </div>
+        </nav>
+      </header>
+    </section>
+    <div class="w-full bg-blueBanner sticky top-0 z-50 overflow-hidden">
+      <div class="container mx-auto px-4 py-2 flex items-center">
+        <button
+          class="bg-secondaryBlue hover:bg-secondaryBlueHover text-white px-6 py-2 rounded-xl flex-shrink-0 z-10 mr-1"
+        >
+          Unlock now<span id="countdown" class="ml-3">00:01:42</span>
+        </button>
+
+        <div class="flex-1 overflow-hidden relative">
+          <div class="animate-marquee whitespace-nowrap inline-block">
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              Admission open now for ACCA 2025 March Session | Only Few seats
+              left
+            </span>
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              87% of seats filled for March 2025 Batch! •
+            </span>
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              Admission open now for ACCA 2025 March Session | Only Few seats
+              left
+            </span>
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              87% of seats filled for March 2025 Batch! •
+            </span>
+          </div>
+
+          <div
+            class="animate-marquee2 whitespace-nowrap inline-block absolute top-0"
+          >
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              Admission open now for ACCA 2025 March Session | Only Few seats
+              left
+            </span>
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              87% of seats filled for March 2025 Batch! •
+            </span>
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              Admission open now for ACCA 2025 March Session | Only Few seats
+              left
+            </span>
+            <span
+              class="text-primaryBlue font-semibold text-sm md:text-base mx-8"
+            >
+              87% of seats filled for March 2025 Batch! •
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-heroBlue py-12 md:py-20 px-4 relative">
+      <img src="/public/hero-pattern.png" class="absolute bottom-0 right-0 hidden lg:block" />
+
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col lg:flex-row items-center gap-10 justify-between"
+        >
+          <div class="w-full lg:w-1/2 space-y-6">
+            <h2
+              class="text-primaryBlue font-semibold text-2xl md:text-3xl font-medium"
+            >
+              Shape the Future of Finance
+            </h2>
+            <h1
+              class="text-primaryBlue font-semibold text-4xl md:text-5xl font-bold leading-tight"
+            >
+              Join India's Most Trusted ACCA Platform
+            </h1>
+
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-8 my-8 bg-white rounded-2xl p-6"
+            >
+              <div class="text-center border-r">
+                <div class="text-3xl font-bold text-[#595959]">4</div>
+                <div class="text-gray-600 text-sm">Years</div>
+              </div>
+              <div class="text-center border-r-0 md:border-r">
+                <div class="text-3xl font-bold text-[#595959]">32</div>
+                <div class="text-gray-600 text-sm">
+                  International<br />Ranks
+                </div>
+              </div>
+              <div class="text-center border-r">
+                <div class="text-3xl font-bold text-[#595959]">64</div>
+                <div class="text-gray-600 text-sm">National<br />Ranks</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-[#595959]">15000+</div>
+                <div class="text-gray-600 text-sm">Pass</div>
+              </div>
+            </div>
+
+            <p class="text-gray-600 text-lg">
+              Trusted by 10,000+ Students Worldwide
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="bg-[#2563EB] text-white px-6 py-3 rounded-lg hover:bg-secondaryBlue transition-colors"
+              >
+                Secure your seat now
+              </button>
+              <button
+                class="border border-[#2563EB] text-[#2563EB] px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <a href="/public/elance-shiksha-hub.pdf" target="_blank">Download Brochure</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="hidden lg:block w-full lg:w-1/2 relative">
+            <img
+              src="/public/hero.png"
+              alt="Hero Image"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          
+        </div>
+        <div class="overflow-hidden  mt-14">
+            <div class="flex animate-marqueeLogosMobile md:animate-marqueeLogos whitespace-nowrap">
+                <!-- First set of logos -->
+                <div class="flex gap-2 md:gap-16 min-w-max">
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/ey.png" alt="EY" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/pwc.png" alt="PWC" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/kpmg.png" alt="KPMG" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/Accenture_logo.svg" alt="Accenture" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/deloitte.png" alt="Deloitte" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/capgemini.png" alt="Capgemini" class="h-full object-cover" />
+                    </div>
+                </div>
+                
+                <!-- Duplicate set of logos for seamless loop -->
+                <div class="flex gap-2 md:gap-16 min-w-max">
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/ey.png" alt="EY" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/pwc.png" alt="PWC" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/kpmg.png" alt="KPMG" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/Accenture_logo.svg" alt="Accenture" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/deloitte.png" alt="Deloitte" class="h-full object-cover" />
+                    </div>
+                    <div class="h-12 shrink-0 flex justify-center items-center mx-2 lg:mx-10 p-2 rounded-xl w-auto">
+                        <img src="/public/capgemini.png" alt="Capgemini" class="h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="bg-heroBlue">
+      <div class="bg-secondaryBg rounded-ss-[100px] py-16 px-4">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="text-primaryBlue font-semibold text-2xl md:text-3xl font-medium mb-12"
+            >
+              Give Your Career the Premium Edge It Deserves!
+            </h2>
+
+            <div
+              class="grid grid-cols-2 p-4 md:grid-cols-4 bg-white max-w-4xl mx-auto rounded-xl shadow-md"
+            >
+              <div class="text-center p-6 border-r">
+                <div
+                  class="text-2xl md:text-3xl font-bold text-primaryBlue font-semibold"
+                >
+                  17,000+
+                </div>
+                <div class="text-gray-600 text-sm mt-2">
+                  Employers Worldwide
+                </div>
+              </div>
+              <div class="text-center p-6 border-r-0 md:border-r">
+                <div
+                  class="text-2xl md:text-3xl font-bold text-primaryBlue font-semibold"
+                >
+                  2,41,000+
+                </div>
+                <div class="text-gray-600 text-sm mt-2">Members</div>
+              </div>
+              <div class="text-center p-6 border-r">
+                <div
+                  class="text-2xl md:text-3xl font-bold text-primaryBlue font-semibold"
+                >
+                  5,42,000+
+                </div>
+                <div class="text-gray-600 text-sm mt-2">Future Members</div>
+              </div>
+              <div class="text-center p-6">
+                <div
+                  class="text-2xl md:text-3xl font-bold text-primaryBlue font-semibold"
+                >
+                  180+
+                </div>
+                <div class="text-gray-600 text-sm mt-2">
+                  Countries & Growing
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-6xl mx-auto">
+            <h2
+              class="text-primaryBlue font-semibold text-2xl md:text-3xl font-bold text-center mb-12"
+            >
+              What makes ACCA the best choice?
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="hidden lg:flex justify-center items-center">
+                <img src="/public/arrow.png" alt="arrow" class="w-32" />
+              </div>
+
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div>
+                      <img src="/public/global.png" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-lg">Global Recognition</h3>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 text-sm">
+                      ACCA is recognized in over 180 countries, opening doors to
+                      international opportunities
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div>
+                      <img src="/public/career.png" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-lg">Diverse Career Paths</h3>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 text-sm">
+                      Work in audit, taxation, financial management, or even
+                      consulting—ACCA qualifies you for it all.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div>
+                      <img src="/public/flexibility.png" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-lg">Flexibility</h3>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 text-sm">
+                      Study and qualify at your own pace, making it perfect for
+                      working professionals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div>
+                      <img src="/public/future.png" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-lg">Future-Ready Skills</h3>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 text-sm">
+                      ACCA equips you with cutting-edge financial and strategic
+                      knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div>
+                      <img src="/public/demand.png" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-lg">High Demand</h3>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 text-sm">
+                      Employers value ACCA for its rigorous standards and
+                      practical application.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-secondaryBg">
+      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 max-w-6xl">
+        <div class="mb-10">
+          <!-- Left Column -->
+          <div>
+            <h2 class="text-primaryBlue text-3xl font-bold mb-6">
+              Why Elance Shiksha Hub<br />
+              is where you belong?
+            </h2>
+            <button class="bg-secondaryBlue text-white px-6 py-3 rounded-lg">
+              Start your journey now
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <div class="grid gap-6">
+            <!-- Proven Success -->
+            <div
+              class="bg-white p-2 rounded-xl flex items-start gap-4 shadow-sm h-22"
+            >
+              <div>
+                <img src="/public/trophy-icon.png" alt="trophy" class="h-20" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">Proven Success</h3>
+                <p class="text-gray-600">
+                  34 World Ranks, 60 National Ranks in just 4 years
+                </p>
+              </div>
+            </div>
+
+            <!-- Top Educators -->
+            <div
+              class="bg-white p-2 rounded-xl flex items-start gap-4 shadow-sm h-22"
+            >
+              <div>
+                <img src="/public/star-icon.png" alt="star" class="h-20" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">Top Educators</h3>
+                <p class="text-gray-600">
+                  Learn from global rank holders with 13+ years of experience
+                </p>
+              </div>
+            </div>
+
+            <!-- Platinum Accredited -->
+            <div
+              class="bg-white p-2 rounded-xl flex items-start gap-4 shadow-sm h-22"
+            >
+              <div>
+                <img src="/public/award-icon.png" alt="award" class="h-20" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">Platinum Accredited</h3>
+                <p class="text-gray-600">
+                  Trusted ACCA Platinum Partner for quality and results
+                </p>
+              </div>
+            </div>
+
+            <!-- AI-Powered Learning -->
+            <div
+              class="bg-white p-2 rounded-xl flex items-start gap-4 shadow-sm h-22"
+            >
+              <div>
+                <img src="/public/ai-icon.png" alt="ai" class="h-20" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">AI-Powered Learning</h3>
+                <p class="text-gray-600">
+                  34 World Ranks, 60 National Ranks in just 4 years
+                </p>
+              </div>
+            </div>
+
+            <!-- Global Community -->
+            <div
+              class="bg-white p-2 rounded-xl flex items-start gap-4 shadow-sm h-22"
+            >
+              <div>
+                <img src="/public/globe-icon.png" alt="globe" class="h-20" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">Global Community</h3>
+                <p class="text-gray-600">
+                  34 World Ranks, 60 National Ranks in just 4 years
+                </p>
+              </div>
+            </div>
+
+            <!-- Career-Focused -->
+            <div
+              class="bg-white p-2 rounded-xl flex items-start gap-4 shadow-sm h-22"
+            >
+              <div>
+                <img src="/public/target-icon.png" alt="target" class="h-20" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">Career-Focused</h3>
+                <p class="text-gray-600">
+                  34 World Ranks, 60 National Ranks in just 4 years
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-secondaryBg">
+      <div class="container mx-auto">
+        <h2 class="text-primaryBlue text-3xl font-bold text-center mb-12">
+          Get to Know Your Mentors!
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 max-w-6xl mx-auto"
+        >
+          <!-- Mentor 1 -->
+          <div class="space-y-4">
+            <img
+              src="/public/mentor1.png"
+              alt="Mentor"
+              class="w-full mx-auto rounded-2xl object-cover h-[350px]"
+            />
+            <div>
+              <h3 class="font-semibold text-lg">CA Vishal Jain A</h3>
+              <p class="text-gray-600">FR & SBR Faculty | ACCA</p>
+              <p class="text-gray-600 mt-2 text-justify">
+                Global Rank 7 & AIR Rank 2 - A top achiever dedicated to shaping
+                future finance leaders.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mentor 2 -->
+          <div class="space-y-4">
+            <img
+              src="/public/mentor2.png"
+              alt="Mentor"
+              class="w-full mx-auto rounded-2xl object-cover h-[350px]"
+            />
+            <div>
+              <h3 class="font-semibold text-lg">Ruchi Goyal</h3>
+              <p class="text-gray-600">AA & AAA Faculty | ACCA</p>
+              <p class="text-gray-600 mt-2 text-justify">
+                Affiliate - An expert in auditing, offering valuable insights
+                into accounting and auditing standards
+              </p>
+            </div>
+          </div>
+
+          <!-- Mentor 3 -->
+          <div class="space-y-4">
+            <img
+              src="/public/mentor3.png"
+              alt="Mentor"
+              class="w-full mx-auto rounded-2xl object-cover h-[350px]"
+            />
+            <div>
+              <h3 class="font-semibold text-lg">Naser Ghazanfer</h3>
+              <p class="text-gray-600">ACCA faculty | Former IIM</p>
+              <p class="text-gray-600 mt-2 text-justify">
+                Mentor - A seasoned mentor with deep industry experience in CMA
+                USA.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mentor 4 -->
+          <div class="space-y-4">
+            <img
+              src="/public/mentor4.png"
+              alt="Mentor"
+              class="w-full mx-auto rounded-2xl object-cover h-[350px]"
+            />
+            <div>
+              <h3 class="font-semibold text-lg">Habeeb Rahiman FCCA</h3>
+              <p class="text-gray-600">Director at Elance Learning</p>
+              <p class="text-gray-600 mt-2 text-justify">
+                13+ years of experience - A finance veteran, shaping leaders
+                with his industry expertise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-gray-50 overflow-hidden">
+      <div class="container mx-auto max-w-6xl overflow-hidden">
+        <h2 class="text-primaryBlue text-3xl font-bold text-center mb-12">
+          Student Testimonials
+        </h2>
+
+        <div class="relative" id="testimonials">
+          <!-- Testimonial Track -->
+          <div class="flex animate-marqueeCard space-x-6">
+            <!-- Testimonial Card 1 -->
+            <div
+              class="flex-shrink-0 h-auto w-full md:w-[400px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between"
+            >
+              <p class="text-gray-600 mb-4">
+                Am very happy and it's a proud moment for me. I have done only
+                my AFM paper here and it was taught by Habeeb sir. Am really
+                happy to be part of Elance , every staff here is well trained
+                and organised. The system of teaching in Elance is very proper ,
+                we could approach 24*7 and they are willing to help us without
+                any hesitation. I was doing an internship while joining Elance
+                as the classes where via app it was very convenient for me.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full">
+                  <img
+                    src="/public/ishak.png"
+                    alt="Muhammed Ishak"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-semibold">Muhammed Ishak</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div
+              class="flex-shrink-0 w-full md:w-[400px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between"
+            >
+              <p class="text-gray-600 mb-4">
+                I could say my career started from Elance, though I joined here
+                for ACCA the mentors and the whole team was like a support
+                system for both academically and non academically to each
+                student. Am very thankful to all the faculties and Elance staff
+                for everything they have provided so far.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full">
+                  <img
+                    src="/public/arlyn.png"
+                    alt="Arlyn Anto"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-semibold">Arlyn Anto</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div
+              class="flex-shrink-0 w-full md:w-[400px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between"
+            >
+              <p class="text-gray-600 mb-4">
+                My mom always used to tell me that well begun is half done. She
+                used to connect it with cooking and relationships. In my case,
+                it always is about choosing Elance. I started my ACCA journey
+                with Elance with hesitations as the institution was new, and I
+                had no idea where it would lead me. Nonetheless, now I remember
+                no decisions as best as this one. Everything I earned is from
+                scratch. Everything the almighty has given me is through Elance!
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full">
+                  <img
+                    src="/public/lenis.png"
+                    alt="Lenis Jose"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-semibold">Lenis Jose</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate cards for seamless loop -->
+            <div
+              class="flex-shrink-0 h-auto w-full md:w-[400px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between"
+            >
+              <p class="text-gray-600 mb-4">
+                Am very happy and it's a proud moment for me. I have done only
+                my AFM paper here and it was taught by Habeeb sir. Am really
+                happy to be part of Elance , every staff here is well trained
+                and organised. The system of teaching in Elance is very proper ,
+                we could approach 24*7 and they are willing to help us without
+                any hesitation. I was doing an internship while joining Elance
+                as the classes where via app it was very convenient for me.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full">
+                  <img
+                    src="/public/ishak.png"
+                    alt="Muhammed Ishak"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-semibold">Muhammed Ishak</h4>
+                </div>
+              </div>
+            </div>
+
+         
+            <div
+              class="flex-shrink-0 w-full md:w-[400px] bg-white rounded-xl p-6 shadow-sm"
+            >
+              <p class="text-gray-600 mb-4">
+                I could say my career started from Elance, though I joined here
+                for ACCA the mentors and the whole team was like a support
+                system for both academically and non academically to each
+                student. Am very thankful to all the faculties and Elance staff
+                for everything they have provided so far.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full">
+                  <img
+                    src="/public/arlyn.png"
+                    alt="Arlyn Anto"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-semibold">Arlyn Anto</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-secondaryBg">
+      <div class="max-w-6xl mx-auto">
+        <h1
+          class="text-2xl font-semibold text-center text-primaryBlue font-semibold mb-6"
+        >
+          Here's What We Offer!
+        </h1>
+
+        <!-- Selection Buttons -->
+        <div class="flex justify-center mb-8">
+          <div
+            class="flex flex-wrap justify-center p-2 bg-[#EEF2F6] rounded-xl"
+          >
+            <button
+              class="px-2 lg:px-6 text-sm lg:text-lg py-2 level-button"
+              id="skill-level-button"
+            >
+              Skill Level
+            </button>
+            <button
+              class="px-2 lg:px-6 text-sm lg:text-lg py-2 level-button"
+              id="profession-level-button"
+            >
+              Professional Level
+            </button>
+            <button
+              class="px-2 lg:px-6 text-sm lg:text-lg py-2 level-button"
+              id="knowledge-level-button"
+            >
+              Knowledge Level
+            </button>
+          </div>
+        </div>
+
+        <!-- Course Cards Container -->
+        <!-- skill level -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 hidden"
+          id="skill-level"
+        >
+          <!-- FR March 2025 Batch -->
+          <div class="bg-white rounded-2xl">
+            <div class="p-6 bg-yellowBg rounded-t-2xl">
+              <h2 class="text-lg font-semibold text-center text-primaryBlue">
+                FR March 2025 Batch
+              </h2>
+              <p class="text-primaryBlue text-center">
+                FR Hindi (Live / Recorded), FR English (Recorded)
+              </p>
+            </div>
+            <div class="space-y-3 text-sm p-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Duration</span>
+                <span class="text-gray-800">80 - 90 hours</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Schedule</span>
+                <span class="text-gray-800">Mon, Wed, Fri @ 8 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Language</span>
+                <span class="text-gray-800">Choice of Hinglish or English</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch start date</span>
+                <span class="text-gray-800">15 Dec 2024</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">FR Orientation</span>
+                <span class="text-gray-800">15th Dec 2024 @ 11 AM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch completion date</span>
+                <span class="text-gray-800">31 Jan 25</span>
+              </div>
+
+              <div class="bg-[#F0F7FF] p-4 rounded-lg space-y-2">
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Concepts</span>
+                  <span class="text-primaryBlue font-semibold">40% Live</span>
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold"
+                    >Practice sessions</span
+                  >
+                  <span class="text-primaryBlue font-semibold">100% Live</span>
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Pre-mock</span>
+                  <span class="text-primaryBlue font-semibold">Live</span>
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold"
+                    >Mock Evaluation</span
+                  >
+                  <span class="text-primaryBlue font-semibold"
+                    >Live Evaluation</span
+                  >
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Mock tests</span>
+                  <span class="text-primaryBlue font-semibold"
+                    >5 (Chapterwise), 2 (Full-fledged)</span
+                  >
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-primaryBlue font-semibold"
+                    >Query sessions</span
+                  >
+                  <span class="text-primaryBlue font-semibold"
+                    >1 session per week</span
+                  >
+                </div>
+              </div>
+
+              <!-- Additional Info -->
+              <div class="text-gray-600 mb-2">Additional</div>
+              <div class="space-y-2">
+                <div class="text-gray-800">FR Revision in 8 hours</div>
+                <div class="text-gray-800">
+                  FR Revision notes for last week revision
+                </div>
+                <div class="text-gray-800">
+                  Evaluation of Interpretation (On demand)
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <button
+                  class="px-4 bg-secondaryBlue text-white py-2 rounded-lg mt-4"
+                >
+                  Enroll now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- AA March 2025 Batch -->
+          <div class="bg-white rounded-2xl">
+            <div class="p-6 bg-yellowBg rounded-t-2xl">
+              <h2 class="text-lg font-semibold text-center text-primaryBlue">
+                AA March 2025 Batch
+              </h2>
+              <p class="text-primaryBlue text-center">
+                AA Hindi (Live / Recorded)
+              </p>
+            </div>
+            <div class="space-y-3 text-sm p-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Duration</span>
+                <span class="text-gray-800">80 - 90 hours</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Schedule</span>
+                <span class="text-gray-800">Mon, Wed, Fri @ 7 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Language</span>
+                <span class="text-gray-800">Hinglish</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch start date</span>
+                <span class="text-gray-800">15 Dec 2024</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">FR Orientation</span>
+                <span class="text-gray-800">15th Dec 2024 @ 4 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch completion date</span>
+                <span class="text-gray-800">05 Feb 2025</span>
+              </div>
+
+              <div class="bg-[#F0F7FF] p-4 rounded-lg space-y-2">
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Concepts</span>
+                  <span class="text-primaryBlue font-semibold">40% Live</span>
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold"
+                    >Practice sessions</span
+                  >
+                  <span class="text-primaryBlue font-semibold">100% Live</span>
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Pre-mock</span>
+                  <span class="text-primaryBlue font-semibold">Live</span>
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold"
+                    >Mock Evaluation</span
+                  >
+                  <span class="text-primaryBlue font-semibold"
+                    >Live Evaluation</span
+                  >
+                </div>
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Mock tests</span>
+                  <span class="text-primaryBlue font-semibold"
+                    >5 (Chapterwise), 2 (Full-fledged)</span
+                  >
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-primaryBlue font-semibold"
+                    >Query sessions</span
+                  >
+                  <span class="text-primaryBlue font-semibold"
+                    >1 session per week</span
+                  >
+                </div>
+              </div>
+
+              <!-- Additional Info -->
+              <div class="text-gray-600 mb-2">Additional</div>
+              <div class="space-y-2">
+                <div class="text-gray-800">AA Revision in 8 hours</div>
+                <div class="text-gray-800">
+                  AA Revision notes for last week revision
+                </div>
+                <div class="text-gray-800">
+                  Individual evaluation of mock tests
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <button
+                  class="px-4 bg-secondaryBlue text-white py-2 rounded-lg mt-4"
+                >
+                  Enroll now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- profession level -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 hidden"
+          id="profession-level"
+        >
+          <!-- SBR March 2025 Batch -->
+          <div class="bg-white rounded-2xl">
+            <div class="p-6 bg-yellowBg rounded-t-2xl">
+              <h2 class="text-lg font-semibold text-center text-primaryBlue">
+                SBR March 2025 Batch
+              </h2>
+              <p class="text-primaryBlue text-center">
+                SBR Hindi (Live / Recorded), SBR English (Live / Recorded)
+              </p>
+            </div>
+            <div class="space-y-3 text-sm p-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Duration</span>
+                <span class="text-gray-800">100 hours</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Schedule</span>
+                <span class="text-gray-800">Sat and Sun @ 8 AM </span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Language</span>
+                <span class="text-gray-800"
+                  >Concept lectures - Choice of Hinglish<br />
+                  or English<br />Practice sessions - English ONLY</span
+                >
+              </div>
+
+              <div class="flex justify-between">
+                <span class="text-gray-600">SBR Orientation</span>
+                <span class="text-gray-800">15th Dec 2024 @ 1 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch start date</span>
+                <span class="text-gray-800">15 Dec 2024</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch completion date</span>
+                <span class="text-gray-800">31 Jan 25</span>
+              </div>
+            </div>
+
+            <div class="bg-[#F0F7FF] p-4 rounded-lg space-y-2">
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Concepts</span>
+                <span class="text-primaryBlue font-semibold">Pre-recorded</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold"
+                  >Practice sessions</span
+                >
+                <span class="text-primaryBlue font-semibold">100% Live</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Pre-mock</span>
+                <span class="text-primaryBlue font-semibold">Live</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold"
+                  >Mock Evaluation</span
+                >
+                <span class="text-primaryBlue font-semibold"
+                  >Live Evaluation Session</span
+                >
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Mock tests</span>
+                <span class="text-primaryBlue font-semibold"
+                  >2 (Full-fledged)</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-primaryBlue font-semibold"
+                  >Query sessions</span
+                >
+                <span class="text-primaryBlue font-semibold"
+                  >1 session per week</span
+                >
+              </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-gray-600 mb-2">Additional</div>
+            <div class="space-y-2">
+              <div class="text-gray-800">SBR Revision in 15 hours</div>
+              <div class="text-gray-800">
+                SBR Capsules for last week revision
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <button
+                class="px-4 bg-secondaryBlue text-white py-2 rounded-lg mt-4"
+              >
+                Enroll now
+              </button>
+            </div>
+          </div>
+
+          <!-- AAA March 2025 Batch -->
+          <div class="bg-white rounded-2xl">
+            <div class="p-6 bg-yellowBg rounded-t-2xl">
+              <h2 class="text-lg font-semibold text-center text-primaryBlue">
+                AAA March 2025 Batch
+              </h2>
+              <p class="text-primaryBlue text-center">
+                AAA Hindi (Live / Recorded), AAA English (Live / Recorded)
+              </p>
+            </div>
+            <div class="space-y-3 text-sm p-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Duration</span>
+                <span class="text-gray-800">100 hours</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Schedule</span>
+                <span class="text-gray-800">Sat and Sun @ 9 AM </span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Language</span>
+                <span class="text-gray-800"
+                  >Concept lectures - Choice of Hinglish<br />
+                  Practice sessions - English ONLY</span
+                >
+              </div>
+
+              <div class="flex justify-between">
+                <span class="text-gray-600">AAA Orientation</span>
+                <span class="text-gray-800">15th Dec 2024 @ 6 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch start date</span>
+                <span class="text-gray-800">15 Dec 2024</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch completion date</span>
+                <span class="text-gray-800">05 Feb 25</span>
+              </div>
+            </div>
+
+            <div class="bg-[#F0F7FF] p-4 rounded-lg space-y-2">
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Concepts</span>
+                <span class="text-primaryBlue font-semibold">Pre-recorded</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold"
+                  >Practice sessions</span
+                >
+                <span class="text-primaryBlue font-semibold">100% Live</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Pre-mock</span>
+                <span class="text-primaryBlue font-semibold">Live</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold"
+                  >Mock Evaluation</span
+                >
+                <span class="text-primaryBlue font-semibold"
+                  >Live Evaluation Session</span
+                >
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Mock tests</span>
+                <span class="text-primaryBlue font-semibold"
+                  >2 (Full-fledged)</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-primaryBlue font-semibold"
+                  >Query sessions</span
+                >
+                <span class="text-primaryBlue font-semibold"
+                  >1 session per week</span
+                >
+              </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-gray-600 mb-2">Additional</div>
+            <div class="space-y-2">
+              <div class="text-gray-800">AAA Revisions</div>
+              <div class="text-gray-800">
+                Individual evaluation of mock tests
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <button
+                class="px-4 bg-secondaryBlue text-white py-2 rounded-lg mt-4"
+              >
+                Enroll now
+              </button>
+            </div>
+          </div>
+
+          <!-- AFM March 2025 Batch -->
+          <div class="bg-white rounded-2xl">
+            <div class="p-6 bg-yellowBg rounded-t-2xl">
+              <h2 class="text-lg font-semibold text-center text-primaryBlue">
+                AFM March 2025 Batch
+              </h2>
+              <p class="text-primaryBlue text-center">
+                AFM English (Live / Recorded)
+              </p>
+            </div>
+            <div class="space-y-3 text-sm p-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Duration</span>
+                <span class="text-gray-800">100 hours</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Schedule</span>
+                <span class="text-gray-800">Sat and Sun @ 9 AM </span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Language</span>
+                <span class="text-gray-800"
+                  >Concept lectures - English ONLY<br />
+                  sessions - English ONLY</span
+                >
+              </div>
+
+              <div class="flex justify-between">
+                <span class="text-gray-600">AFM Orientation</span>
+                <span class="text-gray-800">15th Dec 2024 @ 6 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch start date</span>
+                <span class="text-gray-800">15 Dec 2024</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch completion date</span>
+                <span class="text-gray-800">05 Feb 25</span>
+              </div>
+            </div>
+
+            <div class="bg-[#F0F7FF] p-4 rounded-lg space-y-2">
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Concepts</span>
+                <span class="text-primaryBlue font-semibold">Pre-recorded</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold"
+                  >Practice sessions</span
+                >
+                <span class="text-primaryBlue font-semibold">100% Live</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Pre-mock</span>
+                <span class="text-primaryBlue font-semibold">Live</span>
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold"
+                  >Mock Evaluation</span
+                >
+                <span class="text-primaryBlue font-semibold"
+                  >Live Evaluation Session</span
+                >
+              </div>
+              <div class="flex justify-between border-b border-white">
+                <span class="text-primaryBlue font-semibold">Mock tests</span>
+                <span class="text-primaryBlue font-semibold"
+                  >2 (Full-fledged)</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-primaryBlue font-semibold"
+                  >Query sessions</span
+                >
+                <span class="text-primaryBlue font-semibold"
+                  >1 Live session per week</span
+                >
+              </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-gray-600 mb-2">Additional</div>
+            <div class="space-y-2">
+              <div class="text-gray-800">AFM Revisions</div>
+              <div class="text-gray-800">
+                Individual evaluation of mock tests
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <button
+                class="px-4 bg-secondaryBlue text-white py-2 rounded-lg mt-4"
+              >
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- knowledge level -->
+        <div class="flex justify-center hidden" id="knowledge-level">
+          <!-- MA,BT,FA  March 2025 Batch  -->
+          <div class="bg-white rounded-2xl lg:w-1/3">
+            <div class="p-6 bg-yellowBg rounded-t-2xl">
+              <h2 class="text-lg font-semibold text-center text-primaryBlue">
+                MA,BT,FA March 2025 Batch
+              </h2>
+              <p class="text-primaryBlue text-center">
+                MA,BT,FA (Live / Recorded)
+              </p>
+            </div>
+            <div class="space-y-3 text-sm p-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Duration</span>
+                <span class="text-gray-800">240 - 270 hours</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Schedule</span>
+                <span class="text-gray-800">Mon - Fri @ 2 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Language</span>
+                <span class="text-gray-800"
+                  >Choice of Hinglish or English
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch start date</span>
+                <span class="text-gray-800">Jan 2025</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Orientation</span>
+                <span class="text-gray-800">Jan 2025</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Batch completion date</span>
+                <span class="text-gray-800">Sept 2025</span>
+              </div>
+
+              <!-- Blue Section -->
+              <div class="bg-[#F0F7FF] p-4 rounded-lg space-y-2">
+                <div class="flex justify-between border-b border-white">
+                  <span class="text-primaryBlue font-semibold">Concepts</span>
+                  <span class="text-primaryBlue font-semibold">100% Live</span>
+                </div>
+              </div>
+
+              <!-- Additional Info -->
+              <div class="text-gray-600 mb-2">Additional</div>
+              <div class="space-y-2">
+                <div class="text-gray-800">Talk to our Experts</div>
+              </div>
+
+              <div class="flex justify-center">
+                <button
+                  class="px-4 bg-secondaryBlue text-white py-2 rounded-lg mt-4"
+                >
+                  Enroll now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-secondaryBg">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="text-primaryBlue text-3xl font-bold text-center mb-12">
+          Wondering How This Course Works?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <!-- Live Sessions -->
+          <div class="space-y-4 bg-white rounded-lg shadow-sm">
+            <div class="bg-[#29ABE2] h-32 rounded-t-lg">
+              <img
+                src="/public/live-session.jpg"
+                class="w-full rounded-t-lg h-30"
+                alt="live-session"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">Live Sessions</h3>
+              <p class="text-gray-600 text-sm">
+                Engage in interactive, real-time learning with expert
+                instructors to clear concepts and get insights.
+              </p>
+            </div>
+          </div>
+
+          <!-- Recorded Classes -->
+          <div class="space-y-4 bg-white rounded-lg shadow-sm">
+            <div class="bg-[#29ABE2] h-32 rounded-t-lg">
+                <img
+                src="/public/live-session.jpg"
+                class="w-full rounded-t-lg h-30"
+                alt="live-session"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">Recorded Classes</h3>
+              <p class="text-gray-600 text-sm">
+                Access recorded sessions anytime, anywhere, so you never miss a
+                lesson and can learn at your own pace
+              </p>
+            </div>
+          </div>
+
+          <!-- Doubt Clearance -->
+          <div class="space-y-4 bg-white rounded-lg shadow-sm">
+            <div class="bg-[#29ABE2] h-32 rounded-t-lg">
+                <img
+                src="/public/live-session.jpg"
+                class="w-full rounded-t-lg h-30"
+                alt="live-session"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">Doubt Clearance</h3>
+              <p class="text-gray-600 text-sm">
+                Have a question? Join our doubt clearance sessions and get your
+                queries resolved with personalized attention
+              </p>
+            </div>
+          </div>
+
+          <!-- Community -->
+          <div class="space-y-4 bg-white rounded-lg shadow-sm">
+            <div class="bg-[#29ABE2] h-32 rounded-t-lg">
+                <img
+                src="/public/live-session.jpg"
+                class="w-full rounded-t-lg h-30"
+                alt="live-session"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">Community</h3>
+              <p class="text-gray-600 text-sm">
+                Become part of a vibrant community of learners, sharing ideas,
+                experiences, and building connections for the future.
+              </p>
+            </div>
+          </div>
+
+          <!-- Resit Batch -->
+          <div class="space-y-4 bg-white rounded-lg shadow-sm">
+            <div class="bg-[#29ABE2] h-32 rounded-t-lg">
+                <img
+                src="/public/live-session.jpg"
+                class="w-full rounded-t-lg h-30"
+                alt="live-session"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">Resit Batch</h3>
+              <p class="text-gray-600 text-sm">
+                Become part of a vibrant community of learners, sharing ideas,
+                experiences, and building connections for the future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-secondaryBg">
+      <section
+        class="bg-gradient-to-b from-[#EAF5FF] to-slate-50 rounded-ss-[100px]"
+      >
+        <section class="py-16 px-4 bg-transparent">
+          <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row items-start gap-12">
+              <!-- Left Image Column -->
+              <div class="w-full lg:w-1/3">
+                <img
+                  src="/public/journey-image.png"
+                  alt="Student Journey"
+                  class="w-full h-auto rounded-lg"
+                />
+              </div>
+
+              <!-- Right Content Column -->
+              <div class="w-full lg:w-2/3">
+                <h2
+                  class="text-primaryBlue text-3xl lg:text-4xl font-bold mb-8"
+                >
+                  Here's a Quick Look at<br />Your Journey!
+                </h2>
+
+                <!-- Journey Steps -->
+                <div class="space-y-6">
+                  <!-- Step 1 -->
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="bg-primaryBlue text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                    >
+                      1
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg mb-1">Step In</h3>
+                      <p class="text-gray-600">
+                        Fill out the form and take the first step toward your
+                        dream career.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Step 2 -->
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="bg-primaryBlue text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                    >
+                      2
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg mb-1">Get Started</h3>
+                      <p class="text-gray-600">
+                        Complete the admission process and kick off your
+                        learning journey with us.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Step 3 -->
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="bg-primaryBlue text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                    >
+                      3
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg mb-1">Learn & Grow</h3>
+                      <p class="text-gray-600">
+                        Dive into classes packed with insights and skills
+                        designed for the real world.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Step 4 -->
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="bg-primaryBlue text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                    >
+                      4
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg mb-1">Level Up</h3>
+                      <p class="text-gray-600">
+                        Gain industry-ready expertise to stand out and succeed.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Step 5 -->
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="bg-primaryBlue text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                    >
+                      5
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg mb-1">
+                        Find Your Tribe
+                      </h3>
+                      <p class="text-gray-600">
+                        Join a thriving community of future finance leaders,
+                        building connections for life.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Step 6 -->
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="bg-primaryBlue text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                    >
+                      6
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg mb-1">
+                        Achieve Greatness
+                      </h3>
+                      <p class="text-gray-600">
+                        Graduate with confidence, global opportunities, and the
+                        tools to lead in finance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+          <div
+            class="flex flex-col md:flex-row items-center gap-8 rounded-2xl p-6 bg-yellowBg"
+          >
+            <!-- Left Image -->
+            <div class="w-full md:w-1/3">
+              <img
+                src="/public/community-image.png"
+                alt="Community"
+                class="w-full h-auto"
+              />
+            </div>
+
+            <!-- Right Content -->
+            <div class="w-full md:w-2/3 space-y-4">
+              <h2 class="text-primaryBlue text-3xl md:text-4xl font-bold">
+                Become a Part of Community!
+              </h2>
+
+              <p class="text-gray-600 leading-relaxed">
+                Stay connected, stay informed! Join our exclusive community to
+                get the latest updates, access valuable resources, job
+                opportunities, and more. Be part of a network that supports your
+                growth and helps you succeed. Don't miss out—connect with
+                like-minded future leaders today!
+              </p>
+
+              <button
+                class="bg-secondaryBlue hover:bg-secondaryBlueHover text-white px-6 py-3 rounded-lg transition-colors"
+              >
+                Start your journey now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 px-4 bg-transparent">
+        <div class="container mx-auto max-w-6xl">
+          <h2 class="text-primaryBlue text-3xl font-bold text-center mb-8">
+            FAQ
+          </h2>
+
+          <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >How long does it take to complete the course?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  ACCA takes 2-3 years, while CMA USA can be completed in 6-9
+                  months, depending on your pace. You can learn at your own
+                  pace, with flexibility to balance work or other commitments.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >Can I access the course after completion?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  Yes! You'll have lifetime access to the course materials,
+                  including recorded sessions and resources.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >Do I need any prior experience to enroll?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  No prior experience is required! Our courses are designed for
+                  beginners as well as those looking to enhance their skills.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >How do I get help if I have questions?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  We offer live doubt clearance sessions, and you can also reach
+                  out to our instructors through our community forums.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >Are the classes interactive?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  Absolutely! Our live sessions are designed to be interactive
+                  with Q&A, discussions, and real-time problem-solving.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >What happens if I miss a live session?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  No worries! All live sessions are recorded and available for
+                  you to watch at your convenience.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >Is there any certification after completing the course?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  Yes! You'll receive a certification that showcases your new
+                  skills and enhances your career profile.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >What makes this course different from others?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  Our course combines expert-led live sessions, flexible
+                  learning through recorded classes, and personalized doubt
+                  clearance, all while being part of a global community of
+                  learners.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >Is there any support for job placement?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  While we don't guarantee job placement, our strong industry
+                  connections and alumni network provide excellent opportunities
+                  and resources to help you in your career search.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="bg-white rounded-xl shadow-sm">
+              <button
+                class="w-full px-6 py-4 flex justify-between lg:items-center hover:shadow-sm rounded-lg"
+                onclick="toggleFAQ(this)"
+              >
+                <span class="text-gray-800 text-left"
+                  >How do I get started?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden px-6 py-4 border-t">
+                <p class="text-gray-600">
+                  Simply fill out the form, complete the admission process, and
+                  you're all set to begin your learning journey with us!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="/components/testimonialCarousel.js"></script>
+    <script src="/components/levelSection.js"></script>
+    <script src="/components/faq.js"></script>
+    <script src="/components/timer.js"></script>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</html>
